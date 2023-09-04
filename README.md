@@ -24,25 +24,27 @@ Also "RandomOverSampler(random_state=1)" was used because of imbalanced data. "R
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
-* Average Precision: 0.99 - on average, the model's predictions are correct 99% of the time across both classes.
-* Average Recall: 0.99 - on average, the model correctly identifies 99% of all actual instances across both classes.
+Machine Learning Model 1:
+* Average Precision: 0.99 - on average, the model's predictions are correct 99% of the time across both classes (Healthy Loan and High-Risk Loan).
+* Average Recall: 0.99 - on average, the model correctly identifies 99% of all actual instances across both classes (Healthy Loan and High-Risk Loan).
 * The model seems to have a slightly better performance in identifying healthy loans compared to high-risk loans (as evident from the precision and recall values).
-* For Healthy Loan: the model has a precision of 1.00 for healthy loans, meaning that all of the loans it predicts as healthy are indeed healthy. The model has a recall of 0.99 for healthy loans - it correctly identifies 99% of all actual healthy loans in the dataset.
-* For High-Risk Loan: the precision for high-risk loans is 0.85, meaning that 85% of the loans predicted as high-risk by the model are truly high-risk loans. The model correctly identifies 91% of all actual high-risk loans.
+* For Healthy Loan: the model has a precision of 1.00 for healthy loans, meaning that all of the loans it predicts as healthy are indeed healthy. The model has a recall of 0.99  - it correctly identifies 99% of all actual healthy loans in the dataset.
+* For High-Risk Loan: the precision is 0.85, meaning that 85% of the loans predicted as high-risk by the model are truly high-risk loans. The model has a recall 0.91. The model correctly identifies 91% of all actual high-risk loans.
 * However, the performance on high-risk loans is still good, considering the potential class imbalance suggested by the support values (18,765 vs. 619).
-* Accuracy= (TP +TN) / Total Predictions = (18,663+563) / (18,663+563 + 102 +56) = 0.99. This means that the model correctly predicted the outcome for about 99%.
+* Accuracy= (TP +TN) / Total Predictions = (18,663 + 563) / (18,663+563 + 102 +56) = 0.99. This means that the model correctly predicted the outcome for about 99%.
 
 ​
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+Machine Learning Model 2:
+* Average Precision: 0.99 - on average, the model's predictions are correct 99% of the time across both classes (Healthy Loan and High-Risk Loan).
+* Average Recall: 0.99 - on average, the model correctly identifies 99% of all actual instances across both classes (Healthy Loan and High-Risk Loan).
+* The model seems to have a slightly better performance in identifying healthy loans compared to high-risk loans, based on the precision.
+* For Healthy Loan: the model has a precision of 1.00 for healthy loans, meaning that all of the loans it predicts as healthy are indeed healthy. The model has a recall of 0.99 - it correctly identifies 99% of all actual healthy loans in the dataset.
+* For High-Risk Loan: the precision for high-risk loans is 0.84, meaning that 84% of the loans predicted as high-risk by the model are truly high-risk loans. Recall 0.99 - the model correctly identifies 99% of all actual high-risk loans.
+* Accuracy= (TP +TN) / Total Predictions = (18,649 + 615) / (18,649 + 615 + 116 + 4) = 0.99. This means that the model correctly predicted the outcome for about 99%.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
-# Supervised_Machine_Learning
+* Both models have high average precision and recall, but if we focus on predicting the High-Risk Loan, Model_2 has a significantly higher recall (0.99) for High-Risk Loan compared to Model_1's recall of 0.91. This means Model_2 is better at capturing it.
+* Model_2 has a lower number of False Negatives (4) compared to Model_1 (56). This means Model_2 misses fewer actual positive cases. Model_2 has a slightly higher number of False Positives (116) compared to Model_1 (102).
+* The choice between the two models depends on the problem. If predicting High-Risk Loan correctly is more important (minimizing false negatives), then Model_2 is superior. However, if avoiding false alarms (minimizing false positives) is crucial, then Model_1 might be a slightly better choice.
+* Based on the above analysis, Model_2 seems to be the better choice.
