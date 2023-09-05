@@ -1,7 +1,5 @@
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
 * The purpose of the analysis is to build a model that can identify the creditworthiness of borrowers.
 * The dataset of historical lending activity from a peer-to-peer lending services was used in order to predict creditworthiness of borrowers
 * Model predicts healthy loan and high-risk loan labels ('y'). The balance of the labels variable checking (`y`) by using the `value_counts` function.
